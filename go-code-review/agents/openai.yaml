@@ -1,0 +1,4 @@
+interface:
+  display_name: "Go Code Review"
+  short_description: "Go maintainability and concurrency review"
+  default_prompt: "Use $go-code-review to review this Go codebase for long-term maintainability, idiomatic design, concurrency correctness, and simpler implementations."
