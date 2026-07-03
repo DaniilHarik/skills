@@ -1,0 +1,4 @@
+interface:
+  display_name: "Climb Abstraction Ladder"
+  short_description: "Climb and descend engineering strategy levels"
+  default_prompt: "Use $climb-abstraction-ladder to turn this concrete engineering signal into an operating pattern and strategic choice, then walk it back down into concrete evidence."
