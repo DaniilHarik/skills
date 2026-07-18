@@ -1,6 +1,6 @@
 ---
 name: improve-my-goal
-description: Coach a user through improving a draft individual goal without immediately replacing it with a polished answer. Use when a user supplies a goal draft, asks whether a proposed goal is meaningful, wants to turn an activity or career ambition into an outcome-focused goal, or wants help completing Workday Goal title, Goal description, and Success criteria fields through an interactive conversation.
+description: Coach a user through improving a draft individual goal without immediately replacing it with a polished answer. Use when a user supplies a goal draft, asks whether a proposed goal is meaningful, wants to turn an activity or career ambition into an outcome-focused goal or wants help working through the goal structure.
 ---
 
 # Improve My Goal
