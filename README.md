@@ -6,12 +6,14 @@ Personal agent skills for Codex and other tools that support the open agent skil
 
 - `climb-abstraction-ladder` - Turn concrete engineering signals into operational mechanisms and strategic choices, then walk strategy back down into evidence.
 - `go-code-review` - Review Go codebases for correctness, idiomatic design, maintainability, and concurrency risks.
+- `improve-my-goal` - Coach users through turning draft individual goals into meaningful, outcome-focused goals.
 
 ## Install
 
 ```sh
 npx skills@latest add DaniilHarik/skills/climb-abstraction-ladder
 npx skills@latest add DaniilHarik/skills/go-code-review
+npx skills@latest add DaniilHarik/skills/improve-my-goal
 ```
 
 ## Repository Layout
@@ -25,6 +27,11 @@ climb-abstraction-ladder/
   references/
 
 go-code-review/
+  SKILL.md
+  agents/
+  references/
+
+improve-my-goal/
   SKILL.md
   agents/
   references/

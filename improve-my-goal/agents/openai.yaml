@@ -1,0 +1,4 @@
+interface:
+  display_name: "Improve My Goal"
+  short_description: "Coach a draft into a meaningful goal"
+  default_prompt: "Use $improve-my-goal to help me improve this goal draft through a short conversation."
