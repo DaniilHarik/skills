@@ -1,6 +1,7 @@
 ---
 name: go-code-review
 description: Review entire Go codebases for idiomatic Go, correctness, long-term maintainability, and concurrency design. Use when Codex is asked to review Go or Golang code, assess architecture and code quality, find behavioral or maintainability risks, evaluate goroutine/channel/mutex/context usage, or judge whether concurrent code can be simplified while preserving performance.
+disable-model-invocation: true
 ---
 
 # Go Code Review

@@ -1,6 +1,7 @@
 ---
 name: climb-abstraction-ladder
 description: Help software engineering leaders climb and descend the Ladder of Abstraction between concrete engineering signals, operational mechanisms, and strategic choices. Use when the user provides a concrete signal, evidence, ticket, incident, metric, architecture problem, delivery problem, or leadership concern and wants to climb from concrete to operational to strategic, descend from strategic intent back to operational changes and concrete proof, avoid vague strategy language, or turn engineering observations into leadership-ready framing.
+disable-model-invocation: true
 ---
 
 # Climb Abstraction Ladder

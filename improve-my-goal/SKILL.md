@@ -1,6 +1,7 @@
 ---
 name: improve-my-goal
 description: Coach a user through improving a draft individual goal without immediately replacing it with a polished answer. Use when a user supplies a goal draft, asks whether a proposed goal is meaningful, wants to turn an activity or career ambition into an outcome-focused goal or wants help working through the goal structure.
+disable-model-invocation: true
 ---
 
 # Improve My Goal
