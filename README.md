@@ -5,6 +5,7 @@ Personal agent skills for Codex and other tools that support the open agent skil
 ## Available Skills
 
 - `climb-abstraction-ladder` - Turn concrete engineering signals into operational mechanisms and strategic choices, then walk strategy back down into evidence.
+- `create-mental-model` - Build a reusable mental model from concrete domain relationships and explain its limits.
 - `go-code-review` - Review Go codebases for correctness, idiomatic design, maintainability, and concurrency risks.
 - `improve-my-goal` - Coach users through turning draft individual goals into meaningful, outcome-focused goals.
 
@@ -12,6 +13,7 @@ Personal agent skills for Codex and other tools that support the open agent skil
 
 ```sh
 npx skills@latest add DaniilHarik/skills/climb-abstraction-ladder
+npx skills@latest add DaniilHarik/skills/create-mental-model
 npx skills@latest add DaniilHarik/skills/go-code-review
 npx skills@latest add DaniilHarik/skills/improve-my-goal
 ```
@@ -25,6 +27,9 @@ climb-abstraction-ladder/
   SKILL.md
   agents/
   references/
+
+create-mental-model/
+  SKILL.md
 
 go-code-review/
   SKILL.md
