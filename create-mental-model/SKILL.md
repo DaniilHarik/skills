@@ -14,9 +14,9 @@ The test: if the user forgets everything except one sentence, can they still rea
 
 Compressing a domain you have wrong produces a confidently wrong model, which is worse than no model. So:
 
-- If the topic involves current facts, live figures, named entities, or anything that may have moved — **search first**. Do not model from memory.
+- If the topic involves current facts, live figures, named entities, or anything that may have moved, **search first**. Do not model from memory.
 - Write out the actual terms, entities, and relationships in plain form before attempting any compression. You cannot compress what you haven't laid out.
-- If the user supplied the term list (common — they often paste jargon), treat that list as the scope boundary. Every term they named must land somewhere in the model.
+- If the user supplied the term list, treat that list as the scope boundary. This is common when they paste jargon. Every term they named must land somewhere in the model.
 
 ## Step 1: Name the category error
 
@@ -26,13 +26,13 @@ Ask: what mistake does this domain reliably produce in competent people? Usually
 
 | Confusion | Example |
 |---|---|
-| Object vs. measurement of the object | An API endpoint vs. its p95 latency |
-| Stock vs. flow | Open support tickets vs. tickets arriving each day |
-| Cause vs. marker | High CPU can accompany slow requests without causing every slow request |
-| Estimate vs. quantity | A story-point estimate vs. the time actually spent |
-| Category vs. state | A failed deployment is an event in a release's lifecycle, not a kind of release |
-| Capability vs. artifact | What a system can do vs. what it has produced |
-| Constraint vs. goal | Latency budget vs. user satisfaction |
+| Thing vs. a measurement of it | A person vs. their height in centimetres |
+| Stock vs. flow | Water in a bath vs. water arriving from the tap each minute |
+| Cause vs. marker | Wet pavement can indicate rain without causing the rain |
+| Estimate vs. quantity | The predicted journey time vs. the minutes the journey takes |
+| Category vs. state | An overdue library book is in a state, not a different type of book |
+| Capability vs. artifact | A musician's ability to play vs. the recording they made |
+| Constraint vs. goal | A spending limit vs. the goal of a restorative holiday |
 
 If you can't name the confusion, you don't understand the domain well enough to compress it yet. Go back and read more.
 
@@ -40,7 +40,7 @@ If you can't name the confusion, you don't understand the domain well enough to 
 
 The analogy must be **structural, not decorative**. It works when the domain genuinely shares a shape with the source. In software delivery, a deployment pipeline is a useful model because changes really do move through ordered gates toward production. That model keeps producing correct answers beyond the first paragraph.
 
-Validation test: push the analogy into three of the domain's *hard* cases. If it survives all three, keep it. If it survives only the easy cases, discard it and find another — a metaphor that breaks exactly where the interesting questions live is worse than plain language.
+Validation test: push the analogy into three of the domain's *hard* cases. If it survives all three, keep it. If it survives only the easy cases, discard it and find another. A metaphor that breaks exactly where the interesting questions live is worse than plain language.
 
 Rules:
 - **One analogy per model.** Two competing metaphors cancel out.
@@ -54,13 +54,13 @@ One sentence that regenerates the rest. This is the actual deliverable; everythi
 
 > Incident impact ≈ affected traffic × time to recovery.
 
-Good generative rules are *causal and quantitative in shape* — they name what drives what, and in what proportion. Bad ones are definitional restatements ("code quality matters") or hedged mush.
+Good generative rules are *causal and quantitative in shape*. They name what drives what, and in what proportion. Bad ones are definitional restatements ("code quality matters") or hedged mush.
 
 Sanity check: does the rule imply at least two non-obvious consequences? If it only implies things the user already believed, compress harder.
 
 ## Step 4: Give a procedure
 
-Models nobody can *run* don't get used. Provide an ordered sequence: what to look at first, second, third, and what to do with each. Ordering carries information — put the highest-leverage input first and say why the conventional first input isn't it, if that's true.
+Models nobody can *run* don't get used. Provide an ordered sequence: what to look at first, second, third, and what to do with each. Ordering carries information. Put the highest-leverage input first and say why the conventional first input isn't it, if that's true.
 
 ## Step 5: Test the model in public
 
@@ -70,7 +70,7 @@ Choose real confusions, not softballs. If the model can only handle questions yo
 
 ## Step 6: Mark the failure boundary
 
-**Mandatory.** State where the model misleads. An unbounded model gets over-driven — the user will push it into territory it doesn't cover and reach a confident wrong conclusion, and they'll blame the domain rather than the model.
+**Mandatory.** State where the model misleads. An unbounded model gets over-driven. The user will push it into territory it doesn't cover and reach a confident wrong conclusion, then blame the domain rather than the model.
 
 Include the places the analogy's internal logic predicts something false, and any domain where the user should stop reasoning by model and consult the actual detail (dosing, compliance, legal thresholds, anything with a real downside).
 
@@ -78,20 +78,20 @@ Include the places the analogy's internal logic predicts something false, and an
 
 Deliver in this order, and keep it to roughly one page plus the test cases:
 
-1. **The model** — analogy named, with a compact term-to-role mapping (a table works well when there are more than four terms)
-2. **The governing rule** — set off visually; it's the payload
-3. **How to apply it** — the numbered procedure
-4. **Where it earns its keep** — the test cases
-5. **The one-line version** — for retention
+1. **The model.** Name the analogy and include a compact term-to-role mapping. A table works well when there are more than four terms.
+2. **The governing rule.** Set it off visually. It's the payload.
+3. **How to apply it.** Give the numbered procedure.
+4. **Where it earns its keep.** Include the test cases.
+5. **The one-line version.** Give the retention version.
 6. **Where it breaks down**
 
 Save as a markdown file when the user will reuse it; answer inline when it's part of a live conversation.
 
 ## Anti-patterns
 
-- **The glossary in costume.** Terms with cute labels attached and no generative rule. Check: delete the mapping table — is there still a model? There should be.
+- **The glossary in costume.** Terms with cute labels attached and no generative rule. Check: delete the mapping table. Is there still a model? There should be.
 - **Analogy that only covers the easy cases.** See Step 2 validation.
-- **The consensus summary with a metaphor stapled on.** If the model reorganises nothing and overturns no intuition, it isn't compressing — it's decorating.
+- **The consensus summary with a metaphor stapled on.** If the model reorganises nothing and overturns no intuition, it isn't compressing. It's decorating.
 - **Precision theatre.** Invented thresholds, fake numbers, and false specificity to signal rigour. Say "roughly proportional" if that's what you mean.
 - **Length as substitute for compression.** A model that takes four pages to state has failed at its only job.
 - **Skipping Step 6** because the model feels elegant. Elegant models are the dangerous ones.
